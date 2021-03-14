@@ -2,7 +2,7 @@
 // Micro motor para dibujar sprites 
 // y procesar eventos de ratón
 // ---------------------------------
-
+//Prueba Commit
 var canvas, // Canvas en el que dibujaremos el juego
 	ctx,	// Contexto de dibujado
 	gs,		// Servidor gráfico
