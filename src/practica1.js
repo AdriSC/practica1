@@ -45,11 +45,13 @@ var MemoryGame = function(gs){
 
     this.onClick = function(cardId){
 
-        //Si las cartas se estan volteando, no hace nada
-        if(bloqClick){
+        /*Si las cartas se estan volteando 
+        o se selecciona la misma carta, 
+        o se selecciona una carta de una pareja encontrada, 
+        hacer click no tiene efecto*/
+        if(bloqClick || cardId == selectedCard || cardList[cardId].cardStatus == "found"){
             return null;
         }
-
         /*
         Comprueba si ha hecho click en una carta o fuera del tablero, en caso correcto
         la voltea
@@ -65,7 +67,7 @@ var MemoryGame = function(gs){
         if(selectedCard == -1){
             selectedCard = cardId;
         }
-        /*
+         /*
         Si ya se ha seleccionado una carta voltea otra carta para comprobar si es
         igual a la seleccionada
         */
